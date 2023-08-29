@@ -1,0 +1,5 @@
+# Generated portfolio files
+*.json
+
+# IDE
+.vscode/
