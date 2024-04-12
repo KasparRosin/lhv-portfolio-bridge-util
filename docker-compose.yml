@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  script:
+    build: .
+    image: lhv-portfolio-bridge
+    stdin_open: true
+    tty: true

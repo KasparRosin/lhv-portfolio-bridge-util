@@ -6,13 +6,13 @@ import urllib
 import datetime
 import requests
 
-SID_ENDPOINT_URL = "https://www.lhv.ee/auth/ibank/sid"
+SID_ENDPOINT_URL = "https://www.lhv.ee/auth/ibank/mid"
 PORTFOLIO_REPORT_URL = "https://www.lhv.ee/portfolio/reports_cur.cfm?newframe=1"
 ACCOUNTS_URL = "https://www.lhv.ee/b/accounts"
 
 nickname_input = input("Enter the username: ")
-code_input = input("Enter the id code: ")
-user_payload = {"nickname": nickname_input, "code": code_input}
+code_input = input("Enter the mobile number: ")
+user_payload = {"nickname": nickname_input, "phoneNumber": code_input}
 auth_cookie = {}
 
 default_headers = {
@@ -107,7 +107,7 @@ def select_portfolio(accounts):
     account_portfolio_ids = []
 
     for account in accounts:
-        account_portfolio_ids.append(account['id'])
+        account_portfolio_ids.append(account['accountId'])
         account_names.append(account['name'])
 
     print("\nSelect an account:")
