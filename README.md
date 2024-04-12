@@ -15,14 +15,14 @@ through enhanced data accessibility and analysis capabilities.
 
 Setup
 
-```bash
+```shell
 git clone git@github.com:KasparRosin/lhv-portfolio-bridge-util.git
 cd lhv-portfolio-bridge-util
 ```
 
 Executing the script
 
-```bash
+```shell
 # Docker
 docker build -t lhv-portfolio-bridge-util . && docker run -it lhv-portfolio-bridge-util
 
